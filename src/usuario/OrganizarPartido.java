@@ -1,5 +1,5 @@
-package javaapplication1;
-
+package usuario;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Grupo5
@@ -63,11 +63,6 @@ public class OrganizarPartido extends javax.swing.JPanel implements java.beans.C
 
         txtIDmiembro.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         txtIDmiembro.setName("TXTIDMiembro"); // NOI18N
-        txtIDmiembro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtIDmiembroActionPerformed(evt);
-            }
-        });
 
         jLabel2.setText("Elija el lugar");
 
@@ -92,11 +87,6 @@ public class OrganizarPartido extends javax.swing.JPanel implements java.beans.C
         cmbHora.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23" }));
 
         cmbMin.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "00", "15", "30", "45" }));
-        cmbMin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbMinActionPerformed(evt);
-            }
-        });
 
         jLabel9.setText(":");
 
@@ -251,14 +241,6 @@ public class OrganizarPartido extends javax.swing.JPanel implements java.beans.C
                 .addGap(41, 41, 41))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtIDmiembroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDmiembroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtIDmiembroActionPerformed
-
-    private void cmbMinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbMinActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmbMinActionPerformed
 
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
         // Acá va que vuelva al formulario anterior!!!!

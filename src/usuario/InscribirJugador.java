@@ -1,6 +1,7 @@
 package usuario;
 
 import javax.swing.JOptionPane;
+
 import negocio.*;
 import java.util.*;
 
@@ -70,11 +71,6 @@ public class InscribirJugador extends javax.swing.JPanel implements java.beans.C
         });
 
         txtIdPartido.setEditable(false);
-        txtIdPartido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtIdPartidoActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -140,14 +136,19 @@ public class InscribirJugador extends javax.swing.JPanel implements java.beans.C
 
     private void bGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGuardarActionPerformed
         	int idMiembro  = txtID.getText();
+                
 		
-		Miembro miembro = buscarMiembro(idMiembro);
+		Miembro miembro = Sistema.buscarMiembro(idMiembro);
+                
+                
 
 		int opcion= cmbForma.getSelectedIndex();
 		
 		FormaInscripcion insc = seleccionFormaInscripcion(opcion);
 		
 		Date fechaIncripcion = new Date();
+                
+                
 		
 		Aspirante aspirante = new Aspirante(miembro,insc, fechaIncripcion);
 		
@@ -158,20 +159,17 @@ public class InscribirJugador extends javax.swing.JPanel implements java.beans.C
 			miembro.notificarInscripcion();
 		}
 		else
+                {
 		        JOptionPane.showMessageDialog(this, "No pudo inscribirse al partido", "Información",JOptionPane.INFORMATION_MESSAGE);
 		}
 
-	}
+	
 
     }//GEN-LAST:event_bGuardarActionPerformed
 
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
         // Acá va que vuelva al formulario anterior!!!
     }//GEN-LAST:event_bCancelarActionPerformed
-
-    private void txtIdPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdPartidoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtIdPartidoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

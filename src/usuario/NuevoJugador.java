@@ -41,7 +41,7 @@ public class NuevoJugador extends javax.swing.JPanel implements java.beans.Custo
         jLabel3 = new javax.swing.JLabel();
         txtApellido = new javax.swing.JTextField();
         lblEdad = new javax.swing.JLabel();
-        txtEdad = new javax.swing.JTextField<int>();
+        txtEdad = new javax.swing.JTextField();
         bEnviar = new javax.swing.JButton();
         bEnviar1 = new javax.swing.JButton();
 
@@ -135,9 +135,10 @@ public class NuevoJugador extends javax.swing.JPanel implements java.beans.Custo
         // regresa al menú principal!!!!
     }//GEN-LAST:event_bEnviar1ActionPerformed
 //fijarse si funciona!!!
-    void windowOpened(WindowEvent){
+    void windowOpened(WindowEvent)
+    {
     txtID.setText((ultimoId()+1).toString);
-}
+    }
 
     private void bEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEnviarActionPerformed
 		//puse q muestre el ID, en form load
@@ -169,7 +170,7 @@ public class NuevoJugador extends javax.swing.JPanel implements java.beans.Custo
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lblEdad;
     private javax.swing.JTextField txtApellido;
-    private javax.swing.JTextField<int> txtEdad;
+    private javax.swing.JTextField txtEdad;
     private javax.swing.JTextField txtID;
     private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables

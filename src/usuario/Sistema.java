@@ -17,7 +17,7 @@ public class Sistema
 	
 	//No se usa en este contexto
         
-	/*public static void main(String arg[])
+	public static void main(String arg[])
 	{
 		inicializarCriterios();
 		inicializarAlgoritmos();
@@ -81,7 +81,7 @@ public class Sistema
 	
 		
 	}
-        */
+        
 	
 	//Pide los datos del partido y lo instancia
 	private static void organizarPartido()

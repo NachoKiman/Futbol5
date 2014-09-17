@@ -1,6 +1,6 @@
 package usuario;
 
-import javax.swing.*;
+import javax.swing.JOptionPane;
 import negocio.*;
 import java.util.*;
 

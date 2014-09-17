@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package javaapplication1;
+package usuario;
 
 /**
  *
@@ -144,7 +144,7 @@ public class NuevoJugador extends javax.swing.JPanel implements java.beans.Custo
                 int id = ultimoId() +1;
 		String nombre = txtNombre.getText();
 		String apellido = txtApellido.getText();
-		int edad = txtNombre.getText() ; //mismo problema String to int
+		int edad =txtNombre.getText() ; //mismo problema String to int
 		nuevoMiembro = new Miembro(id, nombre, apellido, edad);
 	
     }//GEN-LAST:event_bEnviarActionPerformed

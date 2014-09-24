@@ -17,6 +17,7 @@ public class IncorporarJugador extends javax.swing.JFrame {
      */
     public IncorporarJugador() {
         initComponents();
+        txtID.setText("1");
     }
 
     /**
@@ -40,7 +41,7 @@ public class IncorporarJugador extends javax.swing.JFrame {
         bEnviar = new javax.swing.JButton();
         bEnviar1 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel12.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
         jLabel12.setText("Solicitud Para Nuevo Jugador");

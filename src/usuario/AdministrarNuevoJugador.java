@@ -9,12 +9,12 @@ package usuario;
  *
  * @author Familia
  */
-public class administrarNuevoJugador extends javax.swing.JFrame {
+public class AdministrarNuevoJugador extends javax.swing.JFrame {
 
     /**
      * Creates new form administrarNuevoJugador
      */
-    public administrarNuevoJugador() {
+    public AdministrarNuevoJugador() {
         initComponents();
     }
 

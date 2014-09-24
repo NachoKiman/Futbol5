@@ -5,12 +5,29 @@
  */
 package usuario;
 
+import java.util.ArrayList;
+import negocio.AlgortimoEquipo;
+import negocio.Criterio;
+import negocio.Denegacion;
+import negocio.Miembro;
+import negocio.Partido;
+
 /**
  *
  * @author Familia
  */
 public class Menu extends javax.swing.JFrame {
-
+    
+    private static Partido partido;
+    private static ArrayList<Miembro> miembros;
+    private static ArrayList<Denegacion> denegaciones;
+    private static Miembro nuevoMiembro;
+    private static boolean partidoBloqueado;
+    private static ArrayList<Criterio> criterios;
+    private static ArrayList<AlgortimoEquipo> algoritmos;
+	
+    
+    
     /**
      * Creates new form menu
      */
@@ -165,7 +182,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_bInscribirsePartidoMouseClicked
 
     private void bBajaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBajaMouseClicked
-        new darseBaja().setVisible(true);
+        new DarseBaja().setVisible(true);
         
     }//GEN-LAST:event_bBajaMouseClicked
 
@@ -174,7 +191,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_bIncorporarJugadorMouseClicked
 
     private void bAdministrarJugadorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bAdministrarJugadorMouseClicked
-        new administrarNuevoJugador().setVisible(true);
+        new AdministrarNuevoJugador().setVisible(true);
     }//GEN-LAST:event_bAdministrarJugadorMouseClicked
 
     private void bGenerarEquiposMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bGenerarEquiposMouseClicked

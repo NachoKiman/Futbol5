@@ -9,12 +9,12 @@ package usuario;
  *
  * @author Familia
  */
-public class darseBaja extends javax.swing.JFrame {
+public class DarseBaja extends javax.swing.JFrame {
 
     /**
      * Creates new form darseBaja
      */
-    public darseBaja() {
+    public DarseBaja() {
         initComponents();
     }
 

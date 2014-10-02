@@ -5,18 +5,23 @@
  */
 
 package usuario;
+import negocio.*;
+import java.util.Date;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Nacho
  */
 public class OrganizarPartido extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form OrganizarNuevoPartido
      */
     public OrganizarPartido() {
         initComponents();
+        
+               
     }
 
     /**
@@ -31,7 +36,7 @@ public class OrganizarPartido extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
+        cmbLugares = new javax.swing.JComboBox();
         txtIDmiembro = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -57,12 +62,12 @@ public class OrganizarPartido extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
         jLabel12.setText("Organizar Nuevo Partido");
 
-        jLabel1.setText("Ingrese su id_miembro:");
+        jLabel1.setText("Ingrese su Id de Miembro:");
         jLabel1.setName(""); // NOI18N
 
         jLabel2.setText("Elija el lugar");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbLugares.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         txtIDmiembro.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         txtIDmiembro.setName("TXTIDMiembro"); // NOI18N
@@ -93,7 +98,7 @@ public class OrganizarPartido extends javax.swing.JFrame {
 
         cmbAño.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2014", "2015", "2016" }));
 
-        jLabel8.setText("Determine Condición (opcional):");
+        jLabel8.setText("Determine Condición:");
 
         cmbCondi.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -177,7 +182,7 @@ public class OrganizarPartido extends javax.swing.JFrame {
                             .addGap(85, 85, 85)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel2)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                .addComponent(cmbLugares, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(85, 85, 85)
                 .addComponent(jLabel12)
@@ -195,7 +200,7 @@ public class OrganizarPartido extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtIDmiembro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbLugares, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -239,29 +244,37 @@ public class OrganizarPartido extends javax.swing.JFrame {
     }//GEN-LAST:event_bCancelarActionPerformed
 
     private void bGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGuardarActionPerformed
-        /*     String lugar = (cmbLugares.getSelectedItem()).toString();
+        String lugar = (cmbLugares.getSelectedItem()).toString();
         int year = cmbAño.getSelectedIndex() + 2014;
         int month = cmbMes.getSelectedIndex() + 1;
         int date = cmbDia.getSelectedIndex() +1;
         int hrs = cmbHora.getSelectedIndex()+1;
         int min = cmbMin.getSelectedIndex()*15;
 
+        
+        int idAdmin = Integer.parseInt(txtIDmiembro.getText());
         Miembro admin = buscarMiembro(idAdmin);
-
         Date fecha = new Date(year, month, date, hrs, min);
         // no reconoce la clase date :(
 
-            CondicionPartido condicion = new SinCondicion();
+        CondicionPartido condicion = new SinCondicion();
 
-            // String idPartido = lugar+ year.toString() + month.toString() + date.toString();
+            //String idPartido = lugar+ year.toString() + month.toString() + date.toString();
 
-            partido = new Partido(lugar, fecha, condicion, admin); //,idPartido);
+        Menu.partido = new Partido(lugar, fecha, condicion, admin); //,idPartido);
 
         JOptionPane.showMessageDialog(this, "Partido creado correctamente", "Información",JOptionPane.INFORMATION_MESSAGE);
-        partidoBloqueado = false;
-        */
+        
+        
     }//GEN-LAST:event_bGuardarActionPerformed
 
+    //Dado un idMiembro, se busca al miembro en la coleccion Miembros
+	private static Miembro buscarMiembro(int idMiembro)
+	{
+            return Menu.miembros.get(idMiembro-1);
+	
+        }
+        
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bCancelar;
     private javax.swing.JButton bGuardar;
@@ -269,9 +282,9 @@ public class OrganizarPartido extends javax.swing.JFrame {
     private javax.swing.JComboBox cmbCondi;
     private javax.swing.JComboBox cmbDia;
     private javax.swing.JComboBox cmbHora;
+    private javax.swing.JComboBox cmbLugares;
     private javax.swing.JComboBox cmbMes;
     private javax.swing.JComboBox cmbMin;
-    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

@@ -102,7 +102,7 @@
                           <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jComboBox1" alignment="0" min="-2" pref="117" max="-2" attributes="0"/>
+                              <Component id="cmbLugares" alignment="0" min="-2" pref="117" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -128,7 +128,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtIDmiembro" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cmbLugares" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -185,7 +185,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Ingrese su id_miembro:"/>
+        <Property name="text" type="java.lang.String" value="Ingrese su Id de Miembro:"/>
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
     </Component>
@@ -194,7 +194,7 @@
         <Property name="text" type="java.lang.String" value="Elija el lugar"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox1">
+    <Component class="javax.swing.JComboBox" name="cmbLugares">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
@@ -364,7 +364,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Determine Condici&#xf3;n (opcional):"/>
+        <Property name="text" type="java.lang.String" value="Determine Condici&#xf3;n:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="cmbCondi">

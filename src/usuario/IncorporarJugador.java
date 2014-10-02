@@ -17,7 +17,7 @@ public class IncorporarJugador extends javax.swing.JFrame {
      */
     public IncorporarJugador() {
         initComponents();
-        txtID.setText("1");
+        
     }
 
     /**

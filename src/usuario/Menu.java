@@ -6,11 +6,8 @@
 package usuario;
 
 import java.util.ArrayList;
-import negocio.AlgortimoEquipo;
-import negocio.Criterio;
-import negocio.Denegacion;
-import negocio.Miembro;
-import negocio.Partido;
+import negocio.*;
+
 
 /**
  *
@@ -18,21 +15,23 @@ import negocio.Partido;
  */
 public class Menu extends javax.swing.JFrame {
     
-    private static Partido partido;
-    private static ArrayList<Miembro> miembros;
-    private static ArrayList<Denegacion> denegaciones;
-    private static Miembro nuevoMiembro;
-    private static boolean partidoBloqueado;
-    private static ArrayList<Criterio> criterios;
-    private static ArrayList<AlgortimoEquipo> algoritmos;
-	
-    
+    public static Partido partido;
+    public static ArrayList<Miembro> miembros;
+    public static ArrayList<Denegacion> denegaciones;
+    public static Miembro nuevoMiembro;
+    public static ArrayList<Criterio> criterios;
+    public static ArrayList<AlgortimoEquipo> algoritmos;
     
     /**
      * Creates new form menu
      */
     public Menu() {
         initComponents();
+        inicializarCriterios();
+	inicializarAlgoritmos();
+	cargarMiembros();
+	denegaciones = new ArrayList<Denegacion>();
+        
     }
 
     /**
@@ -182,7 +181,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_bInscribirsePartidoMouseClicked
 
     private void bBajaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBajaMouseClicked
-        new DarseBaja().setVisible(true);
+       new DarseBaja().setVisible(true);
         
     }//GEN-LAST:event_bBajaMouseClicked
 
@@ -191,15 +190,15 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_bIncorporarJugadorMouseClicked
 
     private void bAdministrarJugadorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bAdministrarJugadorMouseClicked
-        new AdministrarNuevoJugador().setVisible(true);
+       new AdministrarNuevoJugador().setVisible(true);
     }//GEN-LAST:event_bAdministrarJugadorMouseClicked
 
     private void bGenerarEquiposMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bGenerarEquiposMouseClicked
-        
+        new GenerarEquipos().setVisible(true);
     }//GEN-LAST:event_bGenerarEquiposMouseClicked
 
     private void bCalificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bCalificarMouseClicked
-        
+        new CalificarJugador().setVisible(true);
     }//GEN-LAST:event_bCalificarMouseClicked
 
     private void bCerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bCerrarMouseClicked
@@ -240,6 +239,87 @@ public class Menu extends javax.swing.JFrame {
             }
         });
     }
+    
+    //metodo utilitario para pruebas
+	private void cargarMiembros()
+	{
+		miembros = new ArrayList<Miembro>();
+		
+		Miembro miembro1 = new Miembro(1, "Juan", "Perez" , 15);
+		Miembro miembro2 = new Miembro(2, "Pedro", "Quintana" , 20);
+		Miembro miembro3 = new Miembro(3, "Damian", "Quinteros" , 27);
+		Miembro miembro4 = new Miembro(4, "Santiago", "Fernandez" , 15);
+		Miembro miembro5 = new Miembro(5, "Alberto", "Ramirez" , 18);
+		Miembro miembro6 = new Miembro(6, "Leonardo", "Ortega" , 17);
+		Miembro miembro7 = new Miembro(7, "Hernan", "Comar" , 18);
+		Miembro miembro8 = new Miembro(8, "Facundo", "Saavedra" , 19);
+		Miembro miembro9 = new Miembro(9, "Juan Pablo", "Quiroga" , 25);
+		Miembro miembro10 = new Miembro(10, "Lautaro", "Reynoso" , 26);
+		Miembro miembro11 = new Miembro(11, "Martin", "Piedrabuena" , 14);
+		Miembro miembro12 = new Miembro(12, "Esteban", "Ala Triste" , 16);
+		Miembro miembro13 = new Miembro(13, "Raul", "Pontmercy" , 18);
+		Miembro miembro14 = new Miembro(14, "Victor", "Valjean" , 19);
+		Miembro miembro15 = new Miembro(15, "Ignacio", "Kiman" , 16);
+		Miembro miembro16 = new Miembro(16, "Juan Ignacio", "Jarvet" , 18);
+		Miembro miembro17 = new Miembro(17, "Juan Patricio", "Dominguez" , 25);
+		Miembro miembro18 = new Miembro(18, "Patricio", "Ventura" , 28);
+		Miembro miembro19 = new Miembro(19, "Joaquin", "Burocco" , 24);
+		Miembro miembro20 = new Miembro(20, "Nicolas", "Cardozo" , 20);
+		Miembro miembro21 = new Miembro(21, "Fernando", "Novoa" , 15);
+		Miembro miembro22 = new Miembro(22, "Juan Manuel", "Iba�ez" , 22);
+		Miembro miembro23 = new Miembro(23, "Juan Martin", "Bugarin" , 24);
+		Miembro miembro24 = new Miembro(24, "Constantino", "Pereyra" , 19);
+		Miembro miembro25 = new Miembro(25, "Augusto", "Ledesma" , 15);
+		
+		
+		miembros.add(miembro1);
+		miembros.add(miembro2);
+		miembros.add(miembro3);
+		miembros.add(miembro4);
+		miembros.add(miembro5);
+		miembros.add(miembro6);
+		miembros.add(miembro7);
+		miembros.add(miembro8);
+		miembros.add(miembro9);
+		miembros.add(miembro10);
+		miembros.add(miembro11);
+		miembros.add(miembro12);
+		miembros.add(miembro13);
+		miembros.add(miembro14);
+		miembros.add(miembro15);
+		miembros.add(miembro16);
+		miembros.add(miembro17);
+		miembros.add(miembro18);
+		miembros.add(miembro19);
+		miembros.add(miembro20);
+		miembros.add(miembro21);
+		miembros.add(miembro22);
+		miembros.add(miembro23);
+		miembros.add(miembro24);
+		miembros.add(miembro25);
+		
+	}
+
+        
+        //Inicializa los cirterios existentes hasta el momento
+	private static void inicializarCriterios()
+	{
+		criterios = new ArrayList<Criterio>();
+		criterios.add(new Handicap());
+		criterios.add(new PromedioUltimoPartido());
+		criterios.add(new PromedioNPartidos());
+		criterios.add(new Mix());
+	}
+	
+	//Inicializa los algoritmos de eleccion de equipos
+	//existentes hasta el momento
+	private static void inicializarAlgoritmos()
+	{
+		algoritmos = new ArrayList<AlgortimoEquipo>();
+		algoritmos.add(new ParesEImpares());
+		algoritmos.add(new SegundoAlgoritmo());
+		
+	}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bAdministrarJugador;

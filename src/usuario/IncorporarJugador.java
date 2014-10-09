@@ -132,17 +132,17 @@ public class IncorporarJugador extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEnviarActionPerformed
-        /*		//puse q muestre el ID, en form load
         int id = ultimoId() +1;
         String nombre = txtNombre.getText();
         String apellido = txtApellido.getText();
-        int edad =txtNombre.getText() ; //mismo problema String to int
-        nuevoMiembro = new Miembro(id, nombre, apellido, edad);
-        */
+        int edad = Integer.parseInt(txtNombre.getText()) ;
+        Menu.nuevoMiembro = new Miembro(id, nombre, apellido, edad);
+        Menu.nuevoJugador = Menu.nuevoMiembro; // modificar a tabla de pendientes XD
     }//GEN-LAST:event_bEnviarActionPerformed
 
     private void bEnviar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEnviar1ActionPerformed
-        // regresa al menú principal!!!!
+  setVisible(false);
+        dispose();
     }//GEN-LAST:event_bEnviar1ActionPerformed
 
 

@@ -240,7 +240,8 @@ public class OrganizarPartido extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
-        // Acá va que vuelva al formulario anterior!!!!
+ setVisible(false);
+        dispose();
     }//GEN-LAST:event_bCancelarActionPerformed
 
     private void bGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGuardarActionPerformed
@@ -258,10 +259,12 @@ public class OrganizarPartido extends javax.swing.JFrame {
         // no reconoce la clase date :(
 
         CondicionPartido condicion = new SinCondicion();
+        
+        boolean  bloqueado = false;
 
             //String idPartido = lugar+ year.toString() + month.toString() + date.toString();
 
-        Menu.partido = new Partido(lugar, fecha, condicion, admin); //,idPartido);
+        Menu.partido = new Partido(lugar, fecha, condicion, admin); //bloqueado,idPartido); esto recien cuando ∃ mas de 1, el bloqueado da error si lo pongo...
 
         JOptionPane.showMessageDialog(this, "Partido creado correctamente", "Información",JOptionPane.INFORMATION_MESSAGE);
         

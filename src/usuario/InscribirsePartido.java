@@ -5,7 +5,7 @@
  */
 
 package usuario;
-
+import negocio.*;
 /**
  *
  * @author Nacho
@@ -138,12 +138,12 @@ public class InscribirsePartido extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGuardarActionPerformed
-        /*
-        int idMiembro  = txtID.getText();
+    
+        int idMiembro  = Integer.parseInt(txtID.getText());
 
         Miembro miembro = buscarMiembro(idMiembro);
 
-        int opcion= cmbForma.getSelectedIndex();
+        int opcion= cmbForma.getSelectedIndex() +1;
 
         FormaInscripcion insc = seleccionFormaInscripcion(opcion);
 
@@ -162,11 +162,12 @@ public class InscribirsePartido extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "No pudo inscribirse al partido", "Información",JOptionPane.INFORMATION_MESSAGE);
         }
 
-        */
+    
     }//GEN-LAST:event_bGuardarActionPerformed
 
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
-        // Acá va que vuelva al formulario anterior!!!
+         setVisible(false);
+        dispose();
     }//GEN-LAST:event_bCancelarActionPerformed
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
@@ -186,3 +187,26 @@ public class InscribirsePartido extends javax.swing.JFrame {
     private javax.swing.JTextField txtIdPartido;
     // End of variables declaration//GEN-END:variables
 }
+
+//Instancia la forma de inscripcion dependiendo de la opcion elegida
+	public static FormaInscripcion seleccionFormaInscripcion(int opcion)
+	{
+		switch(opcion)
+		{
+			case 1:
+				return new Estandar();
+				
+			case 2:
+				return new Solidario();
+				
+			case 3:
+				return new Condicional(); 
+				
+			default:
+				System.out.println("Opcion no valida");
+				break;
+		}
+		//me obliga a hacer esto porque sino dice que puede llegar
+		//a no tener valor
+		return new Estandar();
+	}

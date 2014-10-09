@@ -17,6 +17,7 @@ public class InscribirsePartido extends javax.swing.JFrame {
      */
     public InscribirsePartido() {
         initComponents();
+        //cargar cmbForma();
     }
 
     /**
@@ -143,7 +144,7 @@ public class InscribirsePartido extends javax.swing.JFrame {
 
         Miembro miembro = buscarMiembro(idMiembro);
 
-        int opcion= cmbForma.getSelectedIndex() +1;
+        int opcion= cmbForma.getSelectedIndex() +1;// = cmbForma.getSelectedItem();
 
         FormaInscripcion insc = seleccionFormaInscripcion(opcion);
 
@@ -195,13 +196,13 @@ public class InscribirsePartido extends javax.swing.JFrame {
 		{
 			case 1:
 				return new Estandar();
-				
+				break;
 			case 2:
 				return new Solidario();
-				
+				break;
 			case 3:
 				return new Condicional(); 
-				
+				break;
 			default:
 				System.out.println("Opcion no valida");
 				break;
@@ -210,3 +211,10 @@ public class InscribirsePartido extends javax.swing.JFrame {
 		//a no tener valor
 		return new Estandar();
 	}
+
+/* Nacho fijate si con esto se reemplaza la opción numérica y el switch
+private void cargarcmbForma() {
+        cmbForma.addItem( new Estandar());
+        cmbForma.addItem( new Solidario);
+        cmbForma.addItem( new Condicional);
+*/

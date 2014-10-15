@@ -3,35 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package usuario;
-
-import java.util.ArrayList;
 import negocio.*;
+import java.util.ArrayList;
 
-
-/**
- *
- * @author Familia
- */
 public class Menu extends javax.swing.JFrame {
     
-    public static Partido partido;
+    public static Partido partido; 
     public static ArrayList<Miembro> miembros;
     public static ArrayList<Denegacion> denegaciones;
     public static Miembro nuevoMiembro;
     public static ArrayList<Criterio> criterios;
-    public static ArrayList<AlgortimoEquipo> algoritmos;
+    public static ArrayList<AlgortimoEquipo> algoritmos; 
+
     
-    /**
-     * Creates new form menu
-     */
     public Menu() {
         initComponents();
         inicializarCriterios();
-	inicializarAlgoritmos();
-	cargarMiembros();
-	denegaciones = new ArrayList<Denegacion>();
-        
+        inicializarAlgoritmos();
+        cargarMiembros();
+        denegaciones = new ArrayList<Denegacion>(); 
+
     }
 
     /**
@@ -43,167 +36,149 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         bOrganizarPartido = new javax.swing.JButton();
         bInscribirsePartido = new javax.swing.JButton();
-        bBaja = new javax.swing.JButton();
+        bDarseBaja = new javax.swing.JButton();
         bIncorporarJugador = new javax.swing.JButton();
         bAdministrarJugador = new javax.swing.JButton();
         bGenerarEquipos = new javax.swing.JButton();
-        bCalificar = new javax.swing.JButton();
-        bCerrar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        bCalificarJugadores = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        bOrganizarPartido.setText("Organizar Partido");
-        bOrganizarPartido.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bOrganizarPartidoMouseClicked(evt);
+        jLabel1.setText("Bienvenido al Sistema de Partidos");
+
+        bOrganizarPartido.setText("Organizar un Partido");
+        bOrganizarPartido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bOrganizarPartidoActionPerformed(evt);
             }
         });
 
         bInscribirsePartido.setText("Inscribirse al partido");
-        bInscribirsePartido.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bInscribirsePartidoMouseClicked(evt);
+        bInscribirsePartido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bInscribirsePartidoActionPerformed(evt);
             }
         });
 
-        bBaja.setText("Darse de baja del partido");
-        bBaja.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bBajaMouseClicked(evt);
+        bDarseBaja.setText("Darse de baja del partido");
+        bDarseBaja.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bDarseBajaActionPerformed(evt);
             }
         });
 
         bIncorporarJugador.setText("Incorporar nuevo jugador");
-        bIncorporarJugador.setMaximumSize(new java.awt.Dimension(159, 23));
-        bIncorporarJugador.setMinimumSize(new java.awt.Dimension(159, 23));
-        bIncorporarJugador.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bIncorporarJugadorMouseClicked(evt);
+        bIncorporarJugador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bIncorporarJugadorActionPerformed(evt);
             }
         });
 
         bAdministrarJugador.setText("Administrar nuevo jugador");
-        bAdministrarJugador.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bAdministrarJugadorMouseClicked(evt);
+        bAdministrarJugador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAdministrarJugadorActionPerformed(evt);
             }
         });
 
         bGenerarEquipos.setText("Generar equipos tentativos");
-        bGenerarEquipos.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bGenerarEquiposMouseClicked(evt);
+        bGenerarEquipos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bGenerarEquiposActionPerformed(evt);
             }
         });
 
-        bCalificar.setText("Calificar jugadores");
-        bCalificar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bCalificarMouseClicked(evt);
+        bCalificarJugadores.setText("Calificar jugadores");
+        bCalificarJugadores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bCalificarJugadoresActionPerformed(evt);
             }
         });
-
-        bCerrar.setText("Cerrar programa");
-        bCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bCerrarMouseClicked(evt);
-            }
-        });
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setText("Bienvenido al Sistema de Partidos");
-
-        jLabel2.setText("Seleccione una opción: ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bCerrar)
-                .addGap(45, 45, 45))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(137, 137, 137)
+                .addContainerGap(106, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(bCalificar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(bGenerarEquipos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
-                        .addComponent(bIncorporarJugador, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(bInscribirsePartido, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(bOrganizarPartido, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(bBaja, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(bAdministrarJugador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(165, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(122, 122, 122))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(bCalificarJugadores, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(bIncorporarJugador, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(bDarseBaja, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(bInscribirsePartido, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(bOrganizarPartido, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(bAdministrarJugador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(bGenerarEquipos, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(100, 100, 100))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(12, 12, 12)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addComponent(bOrganizarPartido)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(bInscribirsePartido)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bBaja)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bIncorporarJugador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
+                .addComponent(bDarseBaja)
+                .addGap(18, 18, 18)
+                .addComponent(bIncorporarJugador)
+                .addGap(18, 18, 18)
                 .addComponent(bAdministrarJugador)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(bGenerarEquipos)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bCalificar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                .addComponent(bCerrar)
-                .addContainerGap())
+                .addGap(19, 19, 19)
+                .addComponent(bCalificarJugadores)
+                .addGap(25, 25, 25))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bOrganizarPartidoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bOrganizarPartidoMouseClicked
-        new OrganizarPartido().setVisible(true);
+    private void bOrganizarPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bOrganizarPartidoActionPerformed
+        (new OrganizarPartido()).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_bOrganizarPartidoActionPerformed
 
-    }//GEN-LAST:event_bOrganizarPartidoMouseClicked
+    private void bInscribirsePartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bInscribirsePartidoActionPerformed
+        (new InscribirsePartido()).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_bInscribirsePartidoActionPerformed
 
-    private void bInscribirsePartidoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bInscribirsePartidoMouseClicked
-        new InscribirsePartido().setVisible(true);
-    }//GEN-LAST:event_bInscribirsePartidoMouseClicked
+    private void bDarseBajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDarseBajaActionPerformed
+        (new DarseBaja()).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_bDarseBajaActionPerformed
 
-    private void bBajaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBajaMouseClicked
-       new DarseBaja().setVisible(true);
-        
-    }//GEN-LAST:event_bBajaMouseClicked
+    private void bIncorporarJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bIncorporarJugadorActionPerformed
+        (new IncorporarJugador()).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_bIncorporarJugadorActionPerformed
 
-    private void bIncorporarJugadorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bIncorporarJugadorMouseClicked
-        new IncorporarJugador().setVisible(true);
-    }//GEN-LAST:event_bIncorporarJugadorMouseClicked
+    private void bAdministrarJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAdministrarJugadorActionPerformed
+        (new AdministrarNuevoJugador()).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_bAdministrarJugadorActionPerformed
 
-    private void bAdministrarJugadorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bAdministrarJugadorMouseClicked
-       new AdministrarNuevoJugador().setVisible(true);
-    }//GEN-LAST:event_bAdministrarJugadorMouseClicked
+    private void bGenerarEquiposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGenerarEquiposActionPerformed
+        (new GenerarEquipos()).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_bGenerarEquiposActionPerformed
 
-    private void bGenerarEquiposMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bGenerarEquiposMouseClicked
-        new GenerarEquipos().setVisible(true);
-    }//GEN-LAST:event_bGenerarEquiposMouseClicked
-
-    private void bCalificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bCalificarMouseClicked
-        new CalificarJugador().setVisible(true);
-    }//GEN-LAST:event_bCalificarMouseClicked
-
-    private void bCerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bCerrarMouseClicked
-        System.exit(0);
-    }//GEN-LAST:event_bCerrarMouseClicked
+    private void bCalificarJugadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCalificarJugadoresActionPerformed
+        (new CalificarJugador()).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_bCalificarJugadoresActionPerformed
 
     /**
      * @param args the command line arguments
@@ -240,8 +215,30 @@ public class Menu extends javax.swing.JFrame {
         });
     }
     
-    //metodo utilitario para pruebas
-	private void cargarMiembros()
+    
+    
+	//Inicializa los cirterios existentes hasta el momento
+	private static void inicializarCriterios()
+	{
+		criterios = new ArrayList<Criterio>();
+		criterios.add(new Handicap());
+		criterios.add(new PromedioUltimoPartido());
+		criterios.add(new PromedioNPartidos());
+		criterios.add(new Mix());
+	}
+	
+	//Inicializa los algoritmos de eleccion de equipos
+	//existentes hasta el momento
+	private static void inicializarAlgoritmos()
+	{
+		algoritmos = new ArrayList<AlgortimoEquipo>();
+		algoritmos.add(new ParesEImpares());
+		algoritmos.add(new SegundoAlgoritmo());
+		
+	}
+	
+	//metodo utilitario para pruebas
+	private static void cargarMiembros()
 	{
 		miembros = new ArrayList<Miembro>();
 		
@@ -300,37 +297,14 @@ public class Menu extends javax.swing.JFrame {
 		
 	}
 
-        
-        //Inicializa los cirterios existentes hasta el momento
-	private static void inicializarCriterios()
-	{
-		criterios = new ArrayList<Criterio>();
-		criterios.add(new Handicap());
-		criterios.add(new PromedioUltimoPartido());
-		criterios.add(new PromedioNPartidos());
-		criterios.add(new Mix());
-	}
-	
-	//Inicializa los algoritmos de eleccion de equipos
-	//existentes hasta el momento
-	private static void inicializarAlgoritmos()
-	{
-		algoritmos = new ArrayList<AlgortimoEquipo>();
-		algoritmos.add(new ParesEImpares());
-		algoritmos.add(new SegundoAlgoritmo());
-		
-	}
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bAdministrarJugador;
-    private javax.swing.JButton bBaja;
-    private javax.swing.JButton bCalificar;
-    private javax.swing.JButton bCerrar;
+    private javax.swing.JButton bCalificarJugadores;
+    private javax.swing.JButton bDarseBaja;
     private javax.swing.JButton bGenerarEquipos;
     private javax.swing.JButton bIncorporarJugador;
     private javax.swing.JButton bInscribirsePartido;
     private javax.swing.JButton bOrganizarPartido;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

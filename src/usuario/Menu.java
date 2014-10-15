@@ -296,6 +296,12 @@ public class Menu extends javax.swing.JFrame {
 		miembros.add(miembro25);
 		
 	}
+        
+        //Dado un idMiembro, se busca al miembro en la coleccion Miembros
+	public static Miembro buscarMiembro(int idMiembro)
+	{
+		return miembros.get(idMiembro-1);
+	}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bAdministrarJugador;

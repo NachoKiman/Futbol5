@@ -6,6 +6,8 @@
 
 package usuario;
 import negocio.*;
+import java.util.Date;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Nacho
@@ -142,7 +144,7 @@ public class InscribirsePartido extends javax.swing.JFrame {
     
         int idMiembro  = Integer.parseInt(txtID.getText());
 
-        Miembro miembro = buscarMiembro(idMiembro);
+        Miembro miembro = Menu.buscarMiembro(idMiembro);
 
         int opcion= cmbForma.getSelectedIndex() +1;// = cmbForma.getSelectedItem();
 
@@ -152,9 +154,9 @@ public class InscribirsePartido extends javax.swing.JFrame {
 
         Aspirante aspirante = new Aspirante(miembro,insc, fechaIncripcion);
 
-        if(partido.permiteInscribir(aspirante))
+        if(Menu.partido.permiteInscribir(aspirante))
         {
-            partido.inscribirJugador(aspirante);
+            Menu.partido.inscribirJugador(aspirante);
             JOptionPane.showMessageDialog(this, "Jugador Inscripto correctamente", "Información",JOptionPane.INFORMATION_MESSAGE);
             miembro.notificarInscripcion();
         }
@@ -175,6 +177,26 @@ public class InscribirsePartido extends javax.swing.JFrame {
        
     }//GEN-LAST:event_formWindowClosed
 
+    //Instancia la forma de inscripcion dependiendo de la opcion elegida
+	public static FormaInscripcion seleccionFormaInscripcion(int opcion)
+	{
+		switch(opcion)
+		{
+			case 1:
+				return new Estandar();
+			case 2:
+				return new Solidario();
+			case 3:
+				return new Condicional(); 
+			default:
+				System.out.println("Opcion no valida");
+				break;
+		}
+		//me obliga a hacer esto porque sino dice que puede llegar
+		//a no tener valor
+		return new Estandar();
+	}
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bCancelar;
@@ -189,28 +211,6 @@ public class InscribirsePartido extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 }
 
-//Instancia la forma de inscripcion dependiendo de la opcion elegida
-	public static FormaInscripcion seleccionFormaInscripcion(int opcion)
-	{
-		switch(opcion)
-		{
-			case 1:
-				return new Estandar();
-				break;
-			case 2:
-				return new Solidario();
-				break;
-			case 3:
-				return new Condicional(); 
-				break;
-			default:
-				System.out.println("Opcion no valida");
-				break;
-		}
-		//me obliga a hacer esto porque sino dice que puede llegar
-		//a no tener valor
-		return new Estandar();
-	}
 
 /* Nacho fijate si con esto se reemplaza la opción numérica y el switch
 private void cargarcmbForma() {

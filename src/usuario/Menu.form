@@ -25,7 +25,11 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
+<<<<<<< HEAD:src/usuario/menu.form
               <Component id="botonCerrar" min="-2" max="-2" attributes="0"/>
+=======
+              <Component id="bCerrar" min="-2" max="-2" attributes="0"/>
+>>>>>>> 9e077a992c494360f7fab57b7f98c13f8951ad6d:src/usuario/Menu.form
               <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
@@ -34,6 +38,7 @@
                   <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+<<<<<<< HEAD:src/usuario/menu.form
                       <Component id="botonCalificar" alignment="0" max="32767" attributes="0"/>
                       <Component id="botonGenerarEq" alignment="0" pref="225" max="32767" attributes="0"/>
                       <Component id="botonNuevoJugador" alignment="0" max="32767" attributes="0"/>
@@ -41,6 +46,15 @@
                       <Component id="botonOrgPartido" alignment="0" max="32767" attributes="0"/>
                       <Component id="botonDarseBaja" alignment="1" max="32767" attributes="0"/>
                       <Component id="botonAdminNuevoJugador" alignment="1" max="32767" attributes="0"/>
+=======
+                      <Component id="bCalificar" alignment="0" max="32767" attributes="0"/>
+                      <Component id="bGenerarEquipos" alignment="0" pref="225" max="32767" attributes="0"/>
+                      <Component id="bIncorporarJugador" alignment="0" max="32767" attributes="0"/>
+                      <Component id="bInscribirsePartido" alignment="0" max="32767" attributes="0"/>
+                      <Component id="bOrganizarPartido" alignment="0" max="32767" attributes="0"/>
+                      <Component id="bBaja" alignment="1" max="32767" attributes="0"/>
+                      <Component id="bAdministrarJugador" alignment="1" max="32767" attributes="0"/>
+>>>>>>> 9e077a992c494360f7fab57b7f98c13f8951ad6d:src/usuario/Menu.form
                   </Group>
               </Group>
               <EmptySpace pref="165" max="32767" attributes="0"/>
@@ -55,6 +69,7 @@
               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
+<<<<<<< HEAD:src/usuario/menu.form
               <Component id="botonOrgPartido" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="botonInscribPartido" min="-2" max="-2" attributes="0"/>
@@ -70,38 +85,80 @@
               <Component id="botonCalificar" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="39" max="32767" attributes="0"/>
               <Component id="botonCerrar" min="-2" max="-2" attributes="0"/>
+=======
+              <Component id="bOrganizarPartido" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="bInscribirsePartido" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="bBaja" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="bIncorporarJugador" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="bAdministrarJugador" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="bGenerarEquipos" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="bCalificar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="39" max="32767" attributes="0"/>
+              <Component id="bCerrar" min="-2" max="-2" attributes="0"/>
+>>>>>>> 9e077a992c494360f7fab57b7f98c13f8951ad6d:src/usuario/Menu.form
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
+<<<<<<< HEAD:src/usuario/menu.form
     <Component class="javax.swing.JButton" name="botonOrgPartido">
+=======
+    <Component class="javax.swing.JButton" name="bOrganizarPartido">
+>>>>>>> 9e077a992c494360f7fab57b7f98c13f8951ad6d:src/usuario/Menu.form
       <Properties>
         <Property name="text" type="java.lang.String" value="Organizar Partido"/>
       </Properties>
       <Events>
+<<<<<<< HEAD:src/usuario/menu.form
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botonOrgPartidoMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonOrgPartidoActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="botonInscribPartido">
+=======
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="bOrganizarPartidoMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="bInscribirsePartido">
+>>>>>>> 9e077a992c494360f7fab57b7f98c13f8951ad6d:src/usuario/Menu.form
       <Properties>
         <Property name="text" type="java.lang.String" value="Inscribirse al partido"/>
       </Properties>
       <Events>
+<<<<<<< HEAD:src/usuario/menu.form
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botonInscribPartidoMouseClicked"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="botonDarseBaja">
+=======
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="bInscribirsePartidoMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="bBaja">
+>>>>>>> 9e077a992c494360f7fab57b7f98c13f8951ad6d:src/usuario/Menu.form
       <Properties>
         <Property name="text" type="java.lang.String" value="Darse de baja del partido"/>
       </Properties>
       <Events>
+<<<<<<< HEAD:src/usuario/menu.form
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botonDarseBajaMouseClicked"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="botonNuevoJugador">
+=======
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="bBajaMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="bIncorporarJugador">
+>>>>>>> 9e077a992c494360f7fab57b7f98c13f8951ad6d:src/usuario/Menu.form
       <Properties>
         <Property name="text" type="java.lang.String" value="Incorporar nuevo jugador"/>
         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -112,39 +169,71 @@
         </Property>
       </Properties>
       <Events>
+<<<<<<< HEAD:src/usuario/menu.form
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botonNuevoJugadorMouseClicked"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="botonAdminNuevoJugador">
+=======
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="bIncorporarJugadorMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="bAdministrarJugador">
+>>>>>>> 9e077a992c494360f7fab57b7f98c13f8951ad6d:src/usuario/Menu.form
       <Properties>
         <Property name="text" type="java.lang.String" value="Administrar nuevo jugador"/>
       </Properties>
       <Events>
+<<<<<<< HEAD:src/usuario/menu.form
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botonAdminNuevoJugadorMouseClicked"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="botonGenerarEq">
+=======
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="bAdministrarJugadorMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="bGenerarEquipos">
+>>>>>>> 9e077a992c494360f7fab57b7f98c13f8951ad6d:src/usuario/Menu.form
       <Properties>
         <Property name="text" type="java.lang.String" value="Generar equipos tentativos"/>
       </Properties>
       <Events>
+<<<<<<< HEAD:src/usuario/menu.form
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botonGenerarEqMouseClicked"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="botonCalificar">
+=======
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="bGenerarEquiposMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="bCalificar">
+>>>>>>> 9e077a992c494360f7fab57b7f98c13f8951ad6d:src/usuario/Menu.form
       <Properties>
         <Property name="text" type="java.lang.String" value="Calificar jugadores"/>
       </Properties>
       <Events>
+<<<<<<< HEAD:src/usuario/menu.form
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botonCalificarMouseClicked"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="botonCerrar">
+=======
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="bCalificarMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="bCerrar">
+>>>>>>> 9e077a992c494360f7fab57b7f98c13f8951ad6d:src/usuario/Menu.form
       <Properties>
         <Property name="text" type="java.lang.String" value="Cerrar programa"/>
       </Properties>
       <Events>
+<<<<<<< HEAD:src/usuario/menu.form
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botonCerrarMouseClicked"/>
+=======
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="bCerrarMouseClicked"/>
+>>>>>>> 9e077a992c494360f7fab57b7f98c13f8951ad6d:src/usuario/Menu.form
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">

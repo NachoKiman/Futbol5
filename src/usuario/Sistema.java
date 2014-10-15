@@ -271,8 +271,8 @@ public class Sistema
 		
 	}
 	
-	//Instancia la forma de inscripcion dependiendo de la opcion elegida
-	public static FormaInscripcion seleccionFormaInscripcion(int opcion)
+	//*Instancia la forma de inscripcion dependiendo de la opcion elegida
+ /*public static FormaInscripcion seleccionFormaInscripcion(int opcion)
 	{
 		switch(opcion)
 		{
@@ -292,7 +292,7 @@ public class Sistema
 		//me obliga a hacer esto porque sino dice que puede llegar
 		//a no tener valor
 		return new Estandar();
-	}
+	} */
 
 	//Se pide los datos del Nuevo jugador y se deja en espera
 	//hasta que el administrador lo revise

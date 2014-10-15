@@ -210,11 +210,3 @@ public class InscribirsePartido extends javax.swing.JFrame {
     private javax.swing.JTextField txtIdPartido;
     // End of variables declaration//GEN-END:variables
 }
-
-
-/* Nacho fijate si con esto se reemplaza la opción numérica y el switch
-private void cargarcmbForma() {
-        cmbForma.addItem( new Estandar());
-        cmbForma.addItem( new Solidario);
-        cmbForma.addItem( new Condicional);
-*/

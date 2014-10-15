@@ -27,74 +27,79 @@ public class menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        botonOrgPartido = new javax.swing.JButton();
+        botonInscribPartido = new javax.swing.JButton();
+        botonDarseBaja = new javax.swing.JButton();
+        botonNuevoJugador = new javax.swing.JButton();
+        botonAdminNuevoJugador = new javax.swing.JButton();
+        botonGenerarEq = new javax.swing.JButton();
+        botonCalificar = new javax.swing.JButton();
+        botonCerrar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Organizar Partido");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        botonOrgPartido.setText("Organizar Partido");
+        botonOrgPartido.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                botonOrgPartidoMouseClicked(evt);
+            }
+        });
+        botonOrgPartido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonOrgPartidoActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Inscribirse al partido");
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        botonInscribPartido.setText("Inscribirse al partido");
+        botonInscribPartido.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
+                botonInscribPartidoMouseClicked(evt);
             }
         });
 
-        jButton3.setText("Darse de baja del partido");
-        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+        botonDarseBaja.setText("Darse de baja del partido");
+        botonDarseBaja.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton3MouseClicked(evt);
+                botonDarseBajaMouseClicked(evt);
             }
         });
 
-        jButton4.setText("Incorporar nuevo jugador");
-        jButton4.setMaximumSize(new java.awt.Dimension(159, 23));
-        jButton4.setMinimumSize(new java.awt.Dimension(159, 23));
-        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+        botonNuevoJugador.setText("Incorporar nuevo jugador");
+        botonNuevoJugador.setMaximumSize(new java.awt.Dimension(159, 23));
+        botonNuevoJugador.setMinimumSize(new java.awt.Dimension(159, 23));
+        botonNuevoJugador.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton4MouseClicked(evt);
+                botonNuevoJugadorMouseClicked(evt);
             }
         });
 
-        jButton5.setText("Administrar nuevo jugador");
-        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+        botonAdminNuevoJugador.setText("Administrar nuevo jugador");
+        botonAdminNuevoJugador.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton5MouseClicked(evt);
+                botonAdminNuevoJugadorMouseClicked(evt);
             }
         });
 
-        jButton6.setText("Generar equipos tentativos");
-        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+        botonGenerarEq.setText("Generar equipos tentativos");
+        botonGenerarEq.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton6MouseClicked(evt);
+                botonGenerarEqMouseClicked(evt);
             }
         });
 
-        jButton7.setText("Calificar jugadores");
-        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+        botonCalificar.setText("Calificar jugadores");
+        botonCalificar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton7MouseClicked(evt);
+                botonCalificarMouseClicked(evt);
             }
         });
 
-        jButton8.setText("Cerrar programa");
-        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+        botonCerrar.setText("Cerrar programa");
+        botonCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton8MouseClicked(evt);
+                botonCerrarMouseClicked(evt);
             }
         });
 
@@ -109,7 +114,7 @@ public class menu extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton8)
+                .addComponent(botonCerrar)
                 .addGap(45, 45, 45))
             .addGroup(layout.createSequentialGroup()
                 .addGap(137, 137, 137)
@@ -117,13 +122,13 @@ public class menu extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(jLabel2)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jButton7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
-                        .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(botonCalificar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botonGenerarEq, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
+                        .addComponent(botonNuevoJugador, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botonInscribPartido, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botonOrgPartido, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botonDarseBaja, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botonAdminNuevoJugador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(165, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -134,59 +139,69 @@ public class menu extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
+                .addComponent(botonOrgPartido)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
+                .addComponent(botonInscribPartido)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3)
+                .addComponent(botonDarseBaja)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonNuevoJugador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5)
+                .addComponent(botonAdminNuevoJugador)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton6)
+                .addComponent(botonGenerarEq)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton7)
+                .addComponent(botonCalificar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                .addComponent(jButton8)
+                .addComponent(botonCerrar)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        organizarPartido();
-    }//GEN-LAST:event_jButton1MouseClicked
+    private void botonOrgPartidoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonOrgPartidoMouseClicked
+        new OrganizarPartido().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_botonOrgPartidoMouseClicked
 
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        inscribirJugador();
-    }//GEN-LAST:event_jButton2MouseClicked
+    private void botonInscribPartidoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonInscribPartidoMouseClicked
+        new InscribirJugador().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_botonInscribPartidoMouseClicked
 
-    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-        darseBaja();
-    }//GEN-LAST:event_jButton3MouseClicked
+    private void botonDarseBajaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonDarseBajaMouseClicked
+        new DarseBaja().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_botonDarseBajaMouseClicked
 
-    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
-        incorporarNuevoJugador();
-    }//GEN-LAST:event_jButton4MouseClicked
+    private void botonNuevoJugadorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonNuevoJugadorMouseClicked
+        new IncorporarNuevoJugador().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_botonNuevoJugadorMouseClicked
 
-    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+    private void botonAdminNuevoJugadorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonAdminNuevoJugadorMouseClicked
         new AdministrarNuevoJugador().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton5MouseClicked
+    }//GEN-LAST:event_botonAdminNuevoJugadorMouseClicked
 
-    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
-        generarEquiposTentativos();
-    }//GEN-LAST:event_jButton6MouseClicked
+    private void botonGenerarEqMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonGenerarEqMouseClicked
+        new GenerarEquiposTentativos().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_botonGenerarEqMouseClicked
 
-    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
-        calificarJugadores();
-    }//GEN-LAST:event_jButton7MouseClicked
+    private void botonCalificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCalificarMouseClicked
+        new CalificarJugadores().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_botonCalificarMouseClicked
 
-    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
+    private void botonCerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCerrarMouseClicked
         fin = true;
-    }//GEN-LAST:event_jButton8MouseClicked
+    }//GEN-LAST:event_botonCerrarMouseClicked
+
+    private void botonOrgPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonOrgPartidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonOrgPartidoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -224,14 +239,14 @@ public class menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
+    private javax.swing.JButton botonAdminNuevoJugador;
+    private javax.swing.JButton botonCalificar;
+    private javax.swing.JButton botonCerrar;
+    private javax.swing.JButton botonDarseBaja;
+    private javax.swing.JButton botonGenerarEq;
+    private javax.swing.JButton botonInscribPartido;
+    private javax.swing.JButton botonNuevoJugador;
+    private javax.swing.JButton botonOrgPartido;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables

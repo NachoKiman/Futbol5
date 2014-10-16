@@ -5,6 +5,7 @@
  */
 
 package usuario;
+import negocio.*;
 
 /**
  *
@@ -45,6 +46,11 @@ public class DarseBaja extends javax.swing.JFrame {
         jLabel3.setText("ID del Miembro reemplazante");
 
         bAceptar.setText("Aceptar");
+        bAceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAceptarActionPerformed(evt);
+            }
+        });
 
         bCancelar.setText("Cancelar");
 
@@ -96,6 +102,23 @@ public class DarseBaja extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAceptarActionPerformed
+        // TODO add your handling code here:
+    /**    if((idReemplazado.getText().equals("")) || (idReemplazante.getText().equals(""))
+                {
+                    Infraccion infraccion = new SinReemplazante();
+                    miembroViejo.getInfracciones().add(infraccion);
+                    Mock mockObject = new Mock();
+                    mockObject.enviarMail(partido.getAdministrador());
+                    //Desplegar mensaje que se lo sanciono
+                    else
+                    {
+                        Miembro miembroNuevo = buscarMiembro(idReemplazante.getText());
+			partido.reemplazoJugadores(idReemplazado.getText(), idReemplazante.getText());
+                            }
+                }*/
+    }//GEN-LAST:event_bAceptarActionPerformed
 
     /**
      * @param args the command line arguments

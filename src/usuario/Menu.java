@@ -302,6 +302,12 @@ public class Menu extends javax.swing.JFrame {
 	{
 		return miembros.get(idMiembro-1);
 	}
+        
+        //Devuelve el ultimo idMiembro de la lista de miembros
+	public static int ultimoId()
+	{
+		return (miembros.get(miembros.size())).getIdMiembro();
+	}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bAdministrarJugador;

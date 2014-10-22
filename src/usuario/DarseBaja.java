@@ -54,6 +54,11 @@ public class DarseBaja extends javax.swing.JFrame {
         });
 
         bCancelar.setText("Cancelar");
+        bCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -127,6 +132,10 @@ public class DarseBaja extends javax.swing.JFrame {
              
             this.setVisible(false);
     }//GEN-LAST:event_bAceptarActionPerformed
+
+    private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
+        this.setVisible(false);
+    }//GEN-LAST:event_bCancelarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

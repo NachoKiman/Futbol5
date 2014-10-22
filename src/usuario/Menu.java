@@ -147,37 +147,37 @@ public class Menu extends javax.swing.JFrame {
 
     private void bOrganizarPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bOrganizarPartidoActionPerformed
         (new OrganizarPartido()).setVisible(true);
-        this.setVisible(false);
+        
     }//GEN-LAST:event_bOrganizarPartidoActionPerformed
 
     private void bInscribirsePartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bInscribirsePartidoActionPerformed
         (new InscribirsePartido()).setVisible(true);
-        this.setVisible(false);
+        
     }//GEN-LAST:event_bInscribirsePartidoActionPerformed
 
     private void bDarseBajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDarseBajaActionPerformed
         (new DarseBaja()).setVisible(true);
-        this.setVisible(false);
+        
     }//GEN-LAST:event_bDarseBajaActionPerformed
 
     private void bIncorporarJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bIncorporarJugadorActionPerformed
         (new IncorporarJugador()).setVisible(true);
-        this.setVisible(false);
+        
     }//GEN-LAST:event_bIncorporarJugadorActionPerformed
 
     private void bAdministrarJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAdministrarJugadorActionPerformed
         (new AdministrarNuevoJugador()).setVisible(true);
-        this.setVisible(false);
+        
     }//GEN-LAST:event_bAdministrarJugadorActionPerformed
 
     private void bGenerarEquiposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGenerarEquiposActionPerformed
         (new GenerarEquipos()).setVisible(true);
-        this.setVisible(false);
+        
     }//GEN-LAST:event_bGenerarEquiposActionPerformed
 
     private void bCalificarJugadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCalificarJugadoresActionPerformed
         (new CalificarJugador()).setVisible(true);
-        this.setVisible(false);
+        
     }//GEN-LAST:event_bCalificarJugadoresActionPerformed
 
     /**

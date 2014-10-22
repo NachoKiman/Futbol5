@@ -268,7 +268,7 @@ public class OrganizarPartido extends javax.swing.JFrame {
 
         JOptionPane.showMessageDialog(this, "Partido creado correctamente", "Información",JOptionPane.INFORMATION_MESSAGE);
         
-        
+        this.setVisible(false);
     }//GEN-LAST:event_bGuardarActionPerformed
 
     //Dado un idMiembro, se busca al miembro en la coleccion Miembros

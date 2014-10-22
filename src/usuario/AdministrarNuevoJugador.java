@@ -6,6 +6,8 @@
 
 package usuario;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Nacho
@@ -17,6 +19,7 @@ public class AdministrarNuevoJugador extends javax.swing.JFrame {
      */
     public AdministrarNuevoJugador() {
         initComponents();
+        labelNuevoJugador.setText(Menu.nuevoMiembro.getNombre()+" "+Menu.nuevoMiembro.getApellido());
     }
 
     /**
@@ -30,30 +33,35 @@ public class AdministrarNuevoJugador extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        labelNuevoJugador = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        bAceptado = new javax.swing.JButton();
+        bRechazado = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Administrar Nuvo Jugador");
 
         jLabel2.setText("Este nuevo jugador quiere inscribirse:");
 
-        jLabel3.setText("mostrarJugador");
+        labelNuevoJugador.setText("mostrarJugador");
 
         jLabel4.setText("Lo aprueba?");
 
-        jButton1.setText("Si");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        bAceptado.setText("Si");
+        bAceptado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                bAceptadoActionPerformed(evt);
             }
         });
 
-        jButton2.setText("No");
+        bRechazado.setText("No");
+        bRechazado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bRechazadoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -65,15 +73,15 @@ public class AdministrarNuevoJugador extends javax.swing.JFrame {
                         .addGap(45, 45, 45)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel3))
+                        .addComponent(labelNuevoJugador))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(166, 166, 166)
                         .addComponent(jLabel4))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(151, 151, 151)
-                        .addComponent(jButton1)
+                        .addComponent(bAceptado)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton2))
+                        .addComponent(bRechazado))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(115, 115, 115)
                         .addComponent(jLabel1)))
@@ -87,64 +95,39 @@ public class AdministrarNuevoJugador extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jLabel3))
+                    .addComponent(labelNuevoJugador))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addContainerGap(157, Short.MAX_VALUE))
+                    .addComponent(bAceptado)
+                    .addComponent(bRechazado))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void bAceptadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAceptadoActionPerformed
+        Menu.miembros.add(Menu.nuevoMiembro);
+        JOptionPane.showMessageDialog(this, "El nuevo jugador se ha agregado correctamente", "Información",JOptionPane.INFORMATION_MESSAGE);
+        this.setVisible(false);
+        Menu.nuevoMiembro= null;
+    }//GEN-LAST:event_bAceptadoActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AdministrarNuevoJugador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AdministrarNuevoJugador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AdministrarNuevoJugador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AdministrarNuevoJugador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void bRechazadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRechazadoActionPerformed
+        Menu.nuevoMiembro= null;
+        (new NotificarJugador()).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_bRechazadoActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new AdministrarNuevoJugador().setVisible(true);
-            }
-        });
-    }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton bAceptado;
+    private javax.swing.JButton bRechazado;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel labelNuevoJugador;
     // End of variables declaration//GEN-END:variables
 }

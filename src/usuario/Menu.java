@@ -7,6 +7,7 @@
 package usuario;
 import negocio.*;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 public class Menu extends javax.swing.JFrame {
     
@@ -23,6 +24,7 @@ public class Menu extends javax.swing.JFrame {
         inicializarCriterios();
         inicializarAlgoritmos();
         cargarMiembros();
+        nuevoMiembro = null;
         denegaciones = new ArrayList<Denegacion>(); 
 
     }
@@ -166,8 +168,14 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_bIncorporarJugadorActionPerformed
 
     private void bAdministrarJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAdministrarJugadorActionPerformed
-        (new AdministrarNuevoJugador()).setVisible(true);
-        
+        if(!(nuevoMiembro==null))
+        {
+            (new AdministrarNuevoJugador()).setVisible(true);
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(this, "No hay ningun jugador que administrar.", "Información",JOptionPane.INFORMATION_MESSAGE);
+        }
     }//GEN-LAST:event_bAdministrarJugadorActionPerformed
 
     private void bGenerarEquiposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGenerarEquiposActionPerformed

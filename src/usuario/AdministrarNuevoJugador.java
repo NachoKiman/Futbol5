@@ -117,7 +117,7 @@ public class AdministrarNuevoJugador extends javax.swing.JFrame {
 
     private void bRechazadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRechazadoActionPerformed
         Menu.nuevoMiembro= null;
-        (new NotificarJugador()).setVisible(true);
+        (new NotificarRazonRechazo()).setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_bRechazadoActionPerformed
 

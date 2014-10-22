@@ -14,12 +14,12 @@ import java.util.Date;
  *
  * @author Nacho
  */
-public class NotificarJugador extends javax.swing.JFrame {
+public class NotificarRazonRechazo extends javax.swing.JFrame {
 
     /**
      * Creates new form NotificarJugador
      */
-    public NotificarJugador() {
+    public NotificarRazonRechazo() {
         initComponents();
     }
 

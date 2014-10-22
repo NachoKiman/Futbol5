@@ -5,6 +5,7 @@
  */
 
 package usuario;
+import javax.swing.JOptionPane;
 import negocio.*;
 
 /**
@@ -37,7 +38,7 @@ public class DarseBaja extends javax.swing.JFrame {
         bAceptar = new javax.swing.JButton();
         bCancelar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setText("Darse de Baja");
 
@@ -104,20 +105,27 @@ public class DarseBaja extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAceptarActionPerformed
-        // TODO add your handling code here:
-    /**    if((idReemplazado.getText().equals("")) || (idReemplazante.getText().equals(""))
-                {
-                    Infraccion infraccion = new SinReemplazante();
-                    miembroViejo.getInfracciones().add(infraccion);
-                    Mock mockObject = new Mock();
-                    mockObject.enviarMail(partido.getAdministrador());
-                    //Desplegar mensaje que se lo sanciono
-                    else
-                    {
-                        Miembro miembroNuevo = buscarMiembro(idReemplazante.getText());
-			partido.reemplazoJugadores(idReemplazado.getText(), idReemplazante.getText());
-                            }
-                }*/
+        
+        int idMiembroViejo = Integer.parseInt(idReemplazado.getText());
+        Miembro miembroViejo = Menu.buscarMiembro(idMiembroViejo);
+        if((idReemplazado.getText().equals("")) || (idReemplazante.getText().equals("")))
+            {
+                
+                Infraccion infraccion = new SinReemplazante();
+                miembroViejo.getInfracciones().add(infraccion);
+                Mock mockObject = new Mock();
+                mockObject.enviarMail(Menu.partido.getAdministrador());
+                JOptionPane.showMessageDialog(this, "Has sido sancionado por no proporcionar un reemplazante.", "Atención",JOptionPane.INFORMATION_MESSAGE);
+            }
+            else
+            {
+                int idMiembroNuevo =Integer.parseInt(idReemplazante.getText());
+                Miembro miembroNuevo = Menu.buscarMiembro(idMiembroNuevo);
+                Menu.partido.reemplazoJugadores(miembroViejo, miembroNuevo);
+                JOptionPane.showMessageDialog(this, "Te has dado de baja del partido satisfactoriamente.", "Atención",JOptionPane.INFORMATION_MESSAGE);
+            }
+             
+            this.setVisible(false);
     }//GEN-LAST:event_bAceptarActionPerformed
 
     /**

@@ -19,6 +19,7 @@ public class InscribirsePartido extends javax.swing.JFrame {
      */
     public InscribirsePartido() {
         initComponents();
+        
         //cargar cmbForma();
     }
 
@@ -165,7 +166,7 @@ public class InscribirsePartido extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "No pudo inscribirse al partido", "Información",JOptionPane.INFORMATION_MESSAGE);
         }
 
-    
+        this.setVisible(false);
     }//GEN-LAST:event_bGuardarActionPerformed
 
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed

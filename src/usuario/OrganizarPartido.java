@@ -240,7 +240,7 @@ public class OrganizarPartido extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
- setVisible(false);
+        setVisible(false);
         dispose();
     }//GEN-LAST:event_bCancelarActionPerformed
 

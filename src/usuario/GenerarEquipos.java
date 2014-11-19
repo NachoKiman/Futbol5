@@ -17,48 +17,48 @@ import javax.swing.JOptionPane;
  */
 public class GenerarEquipos extends javax.swing.JFrame {
 
-    public static void mostrar(ArrayList<Aspirante> equipo1) {
+    public void mostrar(ArrayList<Aspirante> equipo1) {
 for(int i=0; i<5; i++){
-Miembro miembro = equipo.get(i).getMiembro();
+Miembro miembro = equipo1.get(i).getMiembro();
 switch(i)
 			{
 				case 2:
-					j2.setText(getIdMiembro(miembro));
+					j2.setText(""+miembro.getIdMiembro());
 					break;
 				case 3:
-					j3.setText(getIdMiembro(miembro));
+					j3.setText(""+miembro.getIdMiembro());
                                         break;
 				case 4:
-					j4.setText(getIdMiembro(miembro));
+					j4.setText(""+miembro.getIdMiembro());
 					break;
 				case 5:
-					j5.setText(getIdMiembro(miembro));
+					j5.setText(""+miembro.getIdMiembro());
 					break;
                                 default:
-                                        j1.setText(getIdMiembro(miembro));
+                                        j1.setText(""+miembro.getIdMiembro());
                                         break;}
 }  
             }
 
-    public static void mostrar2(ArrayList<Aspirante> equipo2) {
+    public void mostrar2(ArrayList<Aspirante> equipo2) {
 for(int i=0; i<5; i++){
-Miembro miembro = equipo.get(i).getMiembro();
+Miembro miembro = equipo2.get(i).getMiembro();
 			switch(i)
                             {
 				case 2:
-					 j7.setText(getIdMiembro(miembro));
+					 j7.setText(""+miembro.getIdMiembro());
 					break;
 				case 3:
-					j8.setText(getIdMiembro(miembro));
+					j8.setText(""+miembro.getIdMiembro());
                                         break;
 				case 4:
-					j9.setText(getIdMiembro(miembro));
+					j9.setText(""+miembro.getIdMiembro());
 					break;
 				case 5:
-					j10.setText(getIdMiembro(miembro));
+					j10.setText(""+miembro.getIdMiembro());
 					break;
                                 default: 
-                                        j6.setText(getIdMiembro(miembro));
+                                        j6.setText(""+miembro.getIdMiembro());
                                         break;
                                     }
 }
@@ -86,7 +86,7 @@ Miembro miembro = equipo.get(i).getMiembro();
         partido = new javax.swing.JComboBox();
         equipos = new javax.swing.JComboBox();
         orden = new javax.swing.JComboBox();
-        jTextField1 = new javax.swing.JTextField();
+        cantidad = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -117,7 +117,7 @@ Miembro miembro = equipo.get(i).getMiembro();
 
         orden.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Handicap", "Calificaciones del ultimo partido", "Calificaciones de los ultimos n partidos(especificar cantidad)", "Todas las anteriores(especificar cantidad)" }));
 
-        jTextField1.setText("  ");
+        cantidad.setText("  ");
 
         jLabel4.setText("Cantidad");
 
@@ -218,7 +218,7 @@ Miembro miembro = equipo.get(i).getMiembro();
                         .addGap(18, 18, 18)
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(27, 27, 27))))
         );
         layout.setVerticalGroup(
@@ -233,7 +233,7 @@ Miembro miembro = equipo.get(i).getMiembro();
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel4))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel1)
@@ -280,11 +280,14 @@ Miembro miembro = equipo.get(i).getMiembro();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBPActionPerformed
-        Menu.partido.partidoBloqueado = true;
+        //Menu.partido.partidoBloqueado = true;
     }//GEN-LAST:event_btnBPActionPerformed
 
     private void btnGETActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGETActionPerformed
 	boolean fin = false;
+        /*
+        OPCION ERA UNA VARIABLE AUXILIAR. MIRA LO QUE SIGNIFICA EN LA CLASE SISTEMA
+        */
 		while(!fin){
                     opcion = orden.getSelectedIndex();
                     Criterio criterio = Menu.criterios.get(opcion);
@@ -298,16 +301,17 @@ Miembro miembro = equipo.get(i).getMiembro();
 			{
 				int n = Integer.parseInt(cantidad.getText());
 				((Mix)criterio).setN(n);
-				((Mix)criterio).setCriterios(criterios);
+				((Mix)criterio).setCriterios(Menu.criterios);
 			}
-                partido.ordenarJugadores(criterio);
-                
+                Menu.partido.ordenarJugadores(criterio);
+                AlgortimoEquipo algoritmo;//A esto le tenes que asignar el algoritmos correspondiente
                 Menu.partido.organizarEquipos(algoritmo);
-		mostrarEquipos();
+		mostrar(null);
+                }
     }//GEN-LAST:event_btnGETActionPerformed
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
-this.setVisible(false);
+        this.setVisible(false);
         dispose();
     }//GEN-LAST:event_btnVolverActionPerformed
 
@@ -316,6 +320,7 @@ this.setVisible(false);
     private javax.swing.JButton btnBP;
     private javax.swing.JButton btnGET;
     private javax.swing.JButton btnVolver;
+    private javax.swing.JTextField cantidad;
     private javax.swing.JComboBox equipos;
     private javax.swing.JLabel j1;
     private javax.swing.JLabel j10;
@@ -334,7 +339,6 @@ this.setVisible(false);
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JComboBox orden;
     private javax.swing.JComboBox partido;
     // End of variables declaration//GEN-END:variables

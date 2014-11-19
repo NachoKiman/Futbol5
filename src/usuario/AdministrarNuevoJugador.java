@@ -41,7 +41,7 @@ public class AdministrarNuevoJugador extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel1.setText("Administrar Nuvo Jugador");
+        jLabel1.setText("Administrar Nuevo Jugador");
 
         jLabel2.setText("Este nuevo jugador quiere inscribirse:");
 

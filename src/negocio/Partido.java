@@ -1,5 +1,6 @@
 package negocio;
 import java.util.*;
+import usuario.GenerarEquipos;
 
 
 
@@ -122,13 +123,13 @@ public class Partido {
 	
 	public void mostrarEquipos()
 	{
-		System.out.println("Equipo 1:");
-		mostrar(equipo1);
-		System.out.println("Equipo 2:");
-		mostrar(equipo2);
+		//System.out.println("Equipo 1:");
+		GenerarEquipos.mostrar(equipo1);
+                //System.out.println("Equipo 2:");
+		GenerarEquipos.mostrar2(equipo2);
 	}
 	
-	public void mostrar(ArrayList<Aspirante> equipo)
+	/*public void mostrar(ArrayList<Aspirante> equipo)
 	{
 		for(int i=0; i<5; i++)
 		{
@@ -137,7 +138,7 @@ public class Partido {
 						  ", "+miembro.getNombre());
 			
 		}
-	}
+	}*/
 	
 	public Miembro getAdministrador() {
 		return administrador;

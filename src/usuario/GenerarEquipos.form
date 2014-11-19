@@ -69,7 +69,7 @@
                               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="partido" max="32767" attributes="0"/>
-                                  <Component id="equipos" max="32767" attributes="0"/>
+                                  <Component id="algo" max="32767" attributes="0"/>
                                   <Component id="orden" max="32767" attributes="0"/>
                                   <Component id="jLabel12" alignment="0" min="-2" pref="290" max="-2" attributes="0"/>
                               </Group>
@@ -109,7 +109,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="equipos" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="algo" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -175,7 +175,7 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="equipos">
+    <Component class="javax.swing.JComboBox" name="algo">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="2">
@@ -221,6 +221,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Capit&#xe1;n"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="j1MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="j2">
       <Properties>

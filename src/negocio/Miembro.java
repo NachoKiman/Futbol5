@@ -53,6 +53,15 @@ public class Miembro {
 	{
 		return idMiembro;
 	}
+        
+        public Date getNacimiento()
+	{
+		return fechaNacimiento;
+	}
+        public int getEdad()
+	{
+		return edad;
+	}
 	
 	public String getNombre()
 	{

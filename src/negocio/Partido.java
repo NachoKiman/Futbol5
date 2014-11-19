@@ -121,13 +121,13 @@ public class Partido {
 		equipo2 = algoritmo.generarEquipo2(jugadores);
 	}
 	
-	public void mostrarEquipos()
+	/*public void mostrarEquipos()
 	{
-		//System.out.println("Equipo 1:");
-		GenerarEquipos.mostrar(equipo1);
-                //System.out.println("Equipo 2:");
-		GenerarEquipos.mostrar2(equipo2);
-	}
+		System.out.println("Equipo 1:");
+		mostrar(equipo1);
+                System.out.println("Equipo 2:");
+		mostrar(equipo2);
+	}*/
 	
 	/*public void mostrar(ArrayList<Aspirante> equipo)
 	{
@@ -157,9 +157,14 @@ public class Partido {
 		return jugadores;
 	}
 
-	
-	
-	
+	public ArrayList<Aspirante> getEquipo1()
+	{
+		return equipo1;
+	}
+	public ArrayList<Aspirante> getEquipo2()
+	{
+		return equipo2;
+	}
 	
 	
 }

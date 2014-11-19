@@ -390,7 +390,7 @@ public class Sistema
 	//Ingresando los parametros para generar los equipos, muestra
 	// la opcion de equipos. Si al administrador no le gustan los
 	// equipos formados vuelve a hacer el proceso
-	public static void generarEquiposTentativos()
+	/*public static void generarEquiposTentativos()
 
 	{
 		boolean fin = false;
@@ -443,7 +443,7 @@ public class Sistema
 		confirmarEquipos();
 		
 		
-	}
+	}*/
 	
 	//Bloquea todas los menues que tratan sobre cambios en el partido
 	public static void confirmarEquipos()

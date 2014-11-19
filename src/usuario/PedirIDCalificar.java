@@ -92,18 +92,26 @@ public class PedirIDCalificar extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bIngresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bIngresarMouseClicked
-        Miembro miembro = Menu.buscarMiembro(Integer.parseInt(idMiembro.getText()));
-        ArrayList<Aspirante> jugadores = Menu.partido.getJugadores();
-        
-        if(!jugadores.contains(miembro))
-	{
-            JOptionPane.showMessageDialog(this, "Usted no jugó el partido", "Advertencia",JOptionPane.INFORMATION_MESSAGE);
-	}
+        if(idMiembro.getText().length()<=3)
+        {
+            Miembro miembro = Menu.buscarMiembro(Integer.parseInt(idMiembro.getText()));
+            ArrayList<Aspirante> jugadores = Menu.partido.getJugadores();
+
+            if(!jugadores.contains(miembro))
+            {
+                JOptionPane.showMessageDialog(this, "Usted no jugó el partido.", "Advertencia",JOptionPane.INFORMATION_MESSAGE);
+            }
+            else
+            {
+                (new CalificarJugador(miembro, jugadores,0)).setVisible(true);
+                this.setVisible(false);
+            }
+        }
         else
         {
-            (new CalificarJugador(miembro, jugadores,0)).setVisible(true);
-            this.setVisible(false);
+            JOptionPane.showMessageDialog(this, "Ingrese un ID valido.", "Advertencia",JOptionPane.INFORMATION_MESSAGE);
         }
+        
         
     }//GEN-LAST:event_bIngresarMouseClicked
 

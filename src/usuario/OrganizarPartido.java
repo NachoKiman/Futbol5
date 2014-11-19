@@ -53,7 +53,6 @@ public class OrganizarPartido extends javax.swing.JFrame {
         cmbAño = new javax.swing.JComboBox();
         jLabel8 = new javax.swing.JLabel();
         cmbCondi = new javax.swing.JComboBox();
-        lblCondi = new javax.swing.JLabel();
         bCancelar = new javax.swing.JButton();
         bGuardar = new javax.swing.JButton();
 
@@ -67,7 +66,7 @@ public class OrganizarPartido extends javax.swing.JFrame {
 
         jLabel2.setText("Elija el lugar");
 
-        cmbLugares.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbLugares.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Futbolin", "Todo Futbol", "Mangoni", "Futbol5" }));
 
         txtIDmiembro.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         txtIDmiembro.setName("TXTIDMiembro"); // NOI18N
@@ -100,9 +99,7 @@ public class OrganizarPartido extends javax.swing.JFrame {
 
         jLabel8.setText("Determine Condición:");
 
-        cmbCondi.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        lblCondi.setText("[descripción de la condición]");
+        cmbCondi.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Menores de 40", "Solteros", "Solo rubios" }));
 
         bCancelar.setText("Cancelar");
         bCancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -143,33 +140,29 @@ public class OrganizarPartido extends javax.swing.JFrame {
                                                 .addComponent(cmbAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel3))
-                                    .addComponent(cmbCondi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(jLabel3))))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(10, 10, 10)
-                                .addComponent(jLabel8)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel8))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(11, 11, 11)
+                                .addComponent(cmbCondi, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(65, 65, 65)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(cmbHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(3, 3, 3)
+                                    .addComponent(jLabel9)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(cmbMin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jLabel5))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(65, 65, 65)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(cmbHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(3, 3, 3)
-                                            .addComponent(jLabel9)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(cmbMin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(jLabel5))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(10, 10, 10)
-                                        .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jLabel11)
-                                        .addGap(19, 19, 19))))
-                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lblCondi, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18))))
+                                .addComponent(jLabel11)
+                                .addGap(19, 19, 19))))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                             .addComponent(bGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -182,7 +175,8 @@ public class OrganizarPartido extends javax.swing.JFrame {
                             .addGap(85, 85, 85)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel2)
-                                .addComponent(cmbLugares, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                .addComponent(cmbLugares, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(29, 29, 29))
             .addGroup(layout.createSequentialGroup()
                 .addGap(85, 85, 85)
                 .addComponent(jLabel12)
@@ -221,15 +215,10 @@ public class OrganizarPartido extends javax.swing.JFrame {
                     .addComponent(cmbMin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9))
                 .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cmbCondi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(57, 57, 57))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblCondi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cmbCondi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -245,30 +234,38 @@ public class OrganizarPartido extends javax.swing.JFrame {
     }//GEN-LAST:event_bCancelarActionPerformed
 
     private void bGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGuardarActionPerformed
-        String lugar = (cmbLugares.getSelectedItem()).toString();
-        int year = cmbAño.getSelectedIndex() + 2014;
-        int month = cmbMes.getSelectedIndex() + 1;
-        int date = cmbDia.getSelectedIndex() +1;
-        int hrs = cmbHora.getSelectedIndex()+1;
-        int min = cmbMin.getSelectedIndex()*15;
+        if(txtIDmiembro.getText().length()<=3)
+        {
+            String lugar = (cmbLugares.getSelectedItem()).toString();
+            int year = cmbAño.getSelectedIndex() + 2014;
+            int month = cmbMes.getSelectedIndex() + 1;
+            int date = cmbDia.getSelectedIndex() +1;
+            int hrs = cmbHora.getSelectedIndex()+1;
+            int min = cmbMin.getSelectedIndex()*15;
 
+
+            int idAdmin = Integer.parseInt(txtIDmiembro.getText());
+            Miembro admin = buscarMiembro(idAdmin);
+            Date fecha = new Date(year, month, date, hrs, min);
+
+
+            CondicionPartido condicion = new SinCondicion();
+
+            boolean  bloqueado = false;
+
+                //String idPartido = lugar+ year.toString() + month.toString() + date.toString();
+
+            Menu.partido = new Partido(lugar, fecha, condicion, admin); //bloqueado,idPartido); esto recien cuando ∃ mas de 1, el bloqueado da error si lo pongo...
+
+            JOptionPane.showMessageDialog(this, "Partido creado correctamente.", "Información",JOptionPane.INFORMATION_MESSAGE);
+
+            this.setVisible(false);
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(this, "Debe ingresar un ID valido.", "Alerta",JOptionPane.INFORMATION_MESSAGE);
+        }
         
-        int idAdmin = Integer.parseInt(txtIDmiembro.getText());
-        Miembro admin = buscarMiembro(idAdmin);
-        Date fecha = new Date(year, month, date, hrs, min);
-        // no reconoce la clase date :(
-
-        CondicionPartido condicion = new SinCondicion();
-        
-        boolean  bloqueado = false;
-
-            //String idPartido = lugar+ year.toString() + month.toString() + date.toString();
-
-        Menu.partido = new Partido(lugar, fecha, condicion, admin); //bloqueado,idPartido); esto recien cuando ∃ mas de 1, el bloqueado da error si lo pongo...
-
-        JOptionPane.showMessageDialog(this, "Partido creado correctamente", "Información",JOptionPane.INFORMATION_MESSAGE);
-        
-        this.setVisible(false);
     }//GEN-LAST:event_bGuardarActionPerformed
 
     //Dado un idMiembro, se busca al miembro en la coleccion Miembros
@@ -300,7 +297,6 @@ public class OrganizarPartido extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel lblCondi;
     private javax.swing.JTextField txtIDmiembro;
     // End of variables declaration//GEN-END:variables
 }

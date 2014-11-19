@@ -123,30 +123,45 @@ public class InscribirsePartido extends javax.swing.JFrame {
 
     private void bGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGuardarActionPerformed
     
-        int idMiembro  = Integer.parseInt(txtID.getText());
-
-        Miembro miembro = Menu.buscarMiembro(idMiembro);
-        
-        int opcion= cmbForma.getSelectedIndex() +1;// = cmbForma.getSelectedItem();
-
-        FormaInscripcion insc = seleccionFormaInscripcion(opcion);
-
-        Date fechaIncripcion = new Date();
-
-        Aspirante aspirante = new Aspirante(miembro,insc, fechaIncripcion);
-
-        if(Menu.partido.permiteInscribir(aspirante))
+        if(txtID.getText().length()<=3)
         {
-            Menu.partido.inscribirJugador(aspirante);
-            JOptionPane.showMessageDialog(this, "Jugador Inscripto correctamente", "Información",JOptionPane.INFORMATION_MESSAGE);
-            miembro.notificarInscripcion();
+            int idMiembro  = Integer.parseInt(txtID.getText());
+
+            Miembro miembro = Menu.buscarMiembro(idMiembro);
+            if(!Menu.partido.getJugadores().contains(miembro))
+            {
+                int opcion= cmbForma.getSelectedIndex() +1;// = cmbForma.getSelectedItem();
+
+                FormaInscripcion insc = seleccionFormaInscripcion(opcion);
+
+                Date fechaIncripcion = new Date();
+
+                Aspirante aspirante = new Aspirante(miembro,insc, fechaIncripcion);
+
+                if(Menu.partido.permiteInscribir(aspirante))
+                {
+                    Menu.partido.inscribirJugador(aspirante);
+                    JOptionPane.showMessageDialog(this, "Jugador Inscripto correctamente.", "Información",JOptionPane.INFORMATION_MESSAGE);
+                    miembro.notificarInscripcion();
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(this, "No pudo inscribirse al partido.", "Información",JOptionPane.INFORMATION_MESSAGE);
+                }
+
+                this.setVisible(false);
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(this, "Solicitud rechazada. Usted ya se encuentra inscripto al partido.", "Información",JOptionPane.INFORMATION_MESSAGE);
+            }
+            
         }
         else
         {
-            JOptionPane.showMessageDialog(this, "No pudo inscribirse al partido", "Información",JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Debe ingresar un ID valido.", "Alerta",JOptionPane.INFORMATION_MESSAGE);
         }
-
-        this.setVisible(false);
+        
     }//GEN-LAST:event_bGuardarActionPerformed
 
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed

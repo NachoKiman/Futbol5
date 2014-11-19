@@ -121,13 +121,21 @@ public class IncorporarJugador extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEnviarActionPerformed
-        int id = Menu.ultimoId() +1;
-        String nombre = txtNombre.getText();
-        String apellido = txtApellido.getText();
-        int edad = Integer.parseInt(txtEdad.getText()) ;
-        Menu.nuevoMiembro = new Miembro(id, nombre, apellido, edad);
-        this.setVisible(false);
-        JOptionPane.showMessageDialog(this, "Se ha avisado al administrador. Espere su respuesta dentro de las proximas 48 hs.", "Información",JOptionPane.INFORMATION_MESSAGE);
+        if(txtEdad.getText().length()<=3)
+        {
+            int id = Menu.ultimoId() +1;
+            String nombre = txtNombre.getText();
+            String apellido = txtApellido.getText();
+            int edad = Integer.parseInt(txtEdad.getText()) ;
+            Menu.nuevoMiembro = new Miembro(id, nombre, apellido, edad);
+            this.setVisible(false);
+            JOptionPane.showMessageDialog(this, "Se ha avisado al administrador. Espere su respuesta dentro de las proximas 48 hs.", "Información",JOptionPane.INFORMATION_MESSAGE);
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(this, "Ingrese una edad valida.", "Información",JOptionPane.INFORMATION_MESSAGE);
+        }
+        
         
     }//GEN-LAST:event_bEnviarActionPerformed
 

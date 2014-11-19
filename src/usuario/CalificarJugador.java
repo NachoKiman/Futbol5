@@ -142,23 +142,38 @@ public class CalificarJugador extends javax.swing.JFrame {
     private void bSeguirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bSeguirMouseClicked
         if((califiacion.getText().equals("")))
         {
-                JOptionPane.showMessageDialog(this, "Debe ingresar una calificación", "Advertencia",JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Debe ingresar una calificación.", "Advertencia",JOptionPane.INFORMATION_MESSAGE);
         }
         else
         {
-            Calificacion cali = new Calificacion(Integer.parseInt(califiacion.getText()), comentario.getText(), Menu.partido.getFecha());
-            //jugadorACalificar.getCalificaciones().add(cali); 
+            if(califiacion.getText().length()<=3)
+            {
+                if((Integer.parseInt(califiacion.getText())>-1)&&(Integer.parseInt(califiacion.getText())<11))
+                {
+                    Calificacion cali = new Calificacion(Integer.parseInt(califiacion.getText()), comentario.getText(), Menu.partido.getFecha());
+                    //jugadorACalificar.getCalificaciones().add(cali); 
+
+                    if(jugadores.size()==(index+1))
+                    {
+                        JOptionPane.showMessageDialog(this, "No quedan jugadores por calificar.", "Advertencia",JOptionPane.INFORMATION_MESSAGE);
+                        this.setVisible(false);
+                    }
+                    else
+                    {
+                        (new CalificarJugador(jugadorCalificante, jugadores, index+1)).setVisible(true);
+                        this.setVisible(false);
+                    }
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(this, "Se califica con valores desde 0 hasta el 10.", "Advertencia",JOptionPane.INFORMATION_MESSAGE);
+                }
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(this, "Ingrese un valor valido.", "Advertencia",JOptionPane.INFORMATION_MESSAGE);
+            }
             
-            if(jugadores.size()==(index+1))
-        {
-            JOptionPane.showMessageDialog(this, "No quedan jugadores por calificar", "Advertencia",JOptionPane.INFORMATION_MESSAGE);
-            this.setVisible(false);
-        }
-        else
-        {
-            (new CalificarJugador(jugadorCalificante, jugadores, index+1)).setVisible(true);
-            this.setVisible(false);
-        }
         }
 
         

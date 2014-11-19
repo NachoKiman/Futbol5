@@ -110,27 +110,34 @@ public class DarseBaja extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAceptarActionPerformed
+        if((idReemplazado.getText().length()<=3)&&(idReemplazante.getText().length()<=3))
+        {
+            int idMiembroViejo = Integer.parseInt(idReemplazado.getText());
+            Miembro miembroViejo = Menu.buscarMiembro(idMiembroViejo);
+            if((idReemplazado.getText().equals("")) || (idReemplazante.getText().equals("")))
+                {
+
+                    Infraccion infraccion = new SinReemplazante();
+                    miembroViejo.getInfracciones().add(infraccion);
+                    Mock mockObject = new Mock();
+                    mockObject.enviarMail(Menu.partido.getAdministrador());
+                    JOptionPane.showMessageDialog(this, "Has sido sancionado por no proporcionar un reemplazante.", "Atención",JOptionPane.INFORMATION_MESSAGE);
+                }
+                else
+                {
+                    int idMiembroNuevo =Integer.parseInt(idReemplazante.getText());
+                    Miembro miembroNuevo = Menu.buscarMiembro(idMiembroNuevo);
+                    Menu.partido.reemplazoJugadores(miembroViejo, miembroNuevo);
+                    JOptionPane.showMessageDialog(this, "Te has dado de baja del partido satisfactoriamente.", "Atención",JOptionPane.INFORMATION_MESSAGE);
+                }
+
+                this.setVisible(false);
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(this, "Ingrese un ID valido.", "Atención",JOptionPane.INFORMATION_MESSAGE);
+        }
         
-        int idMiembroViejo = Integer.parseInt(idReemplazado.getText());
-        Miembro miembroViejo = Menu.buscarMiembro(idMiembroViejo);
-        if((idReemplazado.getText().equals("")) || (idReemplazante.getText().equals("")))
-            {
-                
-                Infraccion infraccion = new SinReemplazante();
-                miembroViejo.getInfracciones().add(infraccion);
-                Mock mockObject = new Mock();
-                mockObject.enviarMail(Menu.partido.getAdministrador());
-                JOptionPane.showMessageDialog(this, "Has sido sancionado por no proporcionar un reemplazante.", "Atención",JOptionPane.INFORMATION_MESSAGE);
-            }
-            else
-            {
-                int idMiembroNuevo =Integer.parseInt(idReemplazante.getText());
-                Miembro miembroNuevo = Menu.buscarMiembro(idMiembroNuevo);
-                Menu.partido.reemplazoJugadores(miembroViejo, miembroNuevo);
-                JOptionPane.showMessageDialog(this, "Te has dado de baja del partido satisfactoriamente.", "Atención",JOptionPane.INFORMATION_MESSAGE);
-            }
-             
-            this.setVisible(false);
     }//GEN-LAST:event_bAceptarActionPerformed
 
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed

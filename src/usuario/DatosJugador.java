@@ -7,6 +7,8 @@
 package usuario;
 import java.util.ArrayList;
 import negocio.*;
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
 
 /**
  *
@@ -29,21 +31,30 @@ public class DatosJugador extends javax.swing.JPanel {
         lblNac.setText(fecha);
         
         ArrayList<Miembro> amigos = jugador.getAmigos();
+         DefaultListModel listaamigos = new DefaultListModel();
         for(int i=0; i<amigos.size(); i++)
         { Miembro amigo = amigos.get(i);
-            lstAmigos.add(amigo);
-        }
+        listaamigos.addElement(amigo);
+                }
+        lstAmigos = new JList(listaamigos);
+        
+        
         ArrayList<Infraccion> infracciones = jugador.getInfracciones();
+        DefaultListModel listainfracciones = new DefaultListModel();
         for(int i=0; i<infracciones.size(); i++){
          Infraccion infra = infracciones.get(i);
-            lstInfra.add(infra);
+         listainfracciones.addElement(infra);
         }
+        lstInfra= new JList(listainfracciones);
+        
         
         ArrayList<Calificacion> calificaciones = jugador.getCalificaciones();
+        DefaultListModel listacalificaciones = new DefaultListModel();
         for(int i=0; i<calificaciones.size(); i++){
          Calificacion calif = calificaciones.get(i);
-            lstInfra.add(calif);
-        }
+         listainfracciones.addElement(calif);
+          }
+        lstInfra = new JList(listainfracciones);
     }
 
     /**
@@ -209,7 +220,7 @@ public class DatosJugador extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-this.setVisible(false);
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

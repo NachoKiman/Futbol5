@@ -17,25 +17,25 @@ import javax.swing.JOptionPane;
  */
 public class GenerarEquipos extends javax.swing.JFrame {
 
-    public void mostrar1(ArrayList<Aspirante> equipo1) {
+public void mostrar1(ArrayList<Aspirante> equipo1) {
 for(int i=0; i<5; i++){
 Miembro miembro = equipo1.get(i).getMiembro();
 switch(i)
-			{
-				case 2:
-					j2.setText(""+miembro.getIdMiembro());
-					break;
-				case 3:
-					j3.setText(""+miembro.getIdMiembro());
+                        {
+                                case 1:
+                                        j2.setText(""+miembro.getApellido()+", "+miembro.getNombre());
                                         break;
-				case 4:
-					j4.setText(""+miembro.getIdMiembro());
-					break;
-				case 5:
-					j5.setText(""+miembro.getIdMiembro());
-					break;
+                                case 2:
+                                        j3.setText(""+miembro.getApellido()+", "+miembro.getNombre());
+                                        break;
+                                case 3:
+                                        j4.setText(""+miembro.getApellido()+", "+miembro.getNombre());
+                                        break;
+                                case 4:
+                                        j5.setText(""+miembro.getApellido()+", "+miembro.getNombre());
+                                        break;
                                 default:
-                                        j1.setText(""+miembro.getIdMiembro());
+                                        j1.setText(""+miembro.getApellido()+", "+miembro.getNombre());
                                         break;}
 }  
             }
@@ -45,20 +45,20 @@ for(int i=0; i<5; i++){
 Miembro miembro = equipo2.get(i).getMiembro();
 			switch(i)
                             {
+				case 1:
+					 j7.setText(""+miembro.getApellido()+", "+miembro.getNombre());
+					break;
 				case 2:
-					 j7.setText(""+miembro.getIdMiembro());
-					break;
-				case 3:
-					j8.setText(""+miembro.getIdMiembro());
+					j8.setText(""+miembro.getApellido()+", "+miembro.getNombre());
                                         break;
-				case 4:
-					j9.setText(""+miembro.getIdMiembro());
+				case 3:
+					j9.setText(""+miembro.getApellido()+", "+miembro.getNombre());
 					break;
-				case 5:
-					j10.setText(""+miembro.getIdMiembro());
+				case 4:
+					j10.setText(""+miembro.getApellido()+", "+miembro.getNombre());
 					break;
                                 default: 
-                                        j6.setText(""+miembro.getIdMiembro());
+                                        j6.setText(""+miembro.getApellido()+", "+miembro.getNombre());
                                         break;
                                     }
 }
@@ -82,8 +82,6 @@ Miembro miembro = equipo2.get(i).getMiembro();
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        partido = new javax.swing.JComboBox();
         algo = new javax.swing.JComboBox();
         orden = new javax.swing.JComboBox();
         cantidad = new javax.swing.JTextField();
@@ -110,8 +108,6 @@ Miembro miembro = equipo2.get(i).getMiembro();
         jLabel1.setText("Ordenar Jugadores Por");
 
         jLabel2.setText("Separar Equipos Por");
-
-        jLabel3.setText("Partido");
 
         algo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Pares e Impares", "1-4-5-8-9 vs 2-3-6-7-10" }));
 
@@ -150,7 +146,7 @@ Miembro miembro = equipo2.get(i).getMiembro();
 
         j7.setText("Jugador");
 
-        btnBP.setText("Bloquear Partido");
+        btnBP.setText("Guardar Equipos");
         btnBP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBPActionPerformed(evt);
@@ -180,62 +176,55 @@ Miembro miembro = equipo2.get(i).getMiembro();
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(43, 43, 43)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(j1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(j2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(j3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(j4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(j5, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 186, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(j6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(j7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(j8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(j9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(j10, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnGET)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnBP, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel1))
+                        .addGap(43, 43, 43)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(47, 47, 47)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(j1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(j2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(j3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(j4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(j5, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 186, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(j6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(j7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(j8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(j9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(j10, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel1))
-                                .addGap(43, 43, 43)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(partido, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(algo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(orden, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(cantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(27, 27, 27))))
+                            .addComponent(algo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(orden, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(cantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnGET)
+                .addGap(18, 18, 18)
+                .addComponent(btnBP, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(jLabel12)
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(partido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(cantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -275,47 +264,31 @@ Miembro miembro = equipo2.get(i).getMiembro();
                         .addComponent(j10, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBP, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
-                    .addComponent(btnVolver, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
-                    .addComponent(btnGET, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE))
-                .addGap(35, 35, 35))
+                    .addComponent(btnVolver, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnBP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnGET, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBPActionPerformed
-        //Menu.partido.partidoBloqueado = true;
+        JOptionPane.showMessageDialog(this, "Se guardaron los equipos. Estamos listos para jugar!", "Información",JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_btnBPActionPerformed
 
     private void btnGETActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGETActionPerformed
-	boolean fin = false;
-        /*
-        OPCION ERA UNA VARIABLE AUXILIAR. MIRA LO QUE SIGNIFICA EN LA CLASE SISTEMA
-        */
-		while(!fin){
-                    int opcion = orden.getSelectedIndex();
-                    Criterio criterio = Menu.criterios.get(opcion);
-                    if(opcion==3)
-			{
-				int n = Integer.parseInt(cantidad.getText());
-				((PromedioNPartidos)criterio).setN(n);
-				
-			}
-			if(opcion == 4)
-			{
-				int n = Integer.parseInt(cantidad.getText());
-				((Mix)criterio).setN(n);
-				((Mix)criterio).setCriterios(Menu.criterios);
-			}
-                Menu.partido.ordenarJugadores(criterio);
-                AlgortimoEquipo algoritmo = Menu.algoritmos.get(algo.getSelectedIndex());
-                Menu.partido.organizarEquipos(algoritmo);
-                ArrayList<Aspirante> equip1 = Menu.partido.getEquipo1();
-                ArrayList<Aspirante> equip2 = Menu.partido.getEquipo2();
-		mostrar1(equip1);
-                mostrar2(equip2);
-                }
+		
+        int opcion = orden.getSelectedIndex();
+        
+        
+        AlgortimoEquipo algoritmo = Menu.algoritmos.get(algo.getSelectedIndex());
+        Menu.partido.organizarEquipos(algoritmo);
+        ArrayList<Aspirante> equip1 = Menu.partido.getEquipo1();
+        ArrayList<Aspirante> equip2 = Menu.partido.getEquipo2();
+        mostrar1(equip1);
+        mostrar2(equip2);
+                
     }//GEN-LAST:event_btnGETActionPerformed
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
@@ -324,9 +297,7 @@ Miembro miembro = equipo2.get(i).getMiembro();
     }//GEN-LAST:event_btnVolverActionPerformed
 
     private void j1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_j1MouseClicked
-        if (j1.getText() != "Capitán")
-       {int idjugador = Integer.parseInt(j1.getText());
-        new DatosJugador(idjugador);}
+       
     }//GEN-LAST:event_j1MouseClicked
 
 
@@ -349,12 +320,10 @@ Miembro miembro = equipo2.get(i).getMiembro();
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JComboBox orden;
-    private javax.swing.JComboBox partido;
     // End of variables declaration//GEN-END:variables
 }
 
